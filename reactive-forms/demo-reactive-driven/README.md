@@ -12,13 +12,13 @@
       - [FormBuilder](#formbuilder)
     - [Binding to Form Model](#binding-to-form-model)
     - [Accessing Model Properties](#accessing-model-properties)
+  - [Updating values](#updating-values)
   - [Validation](#validation)
     - [Built-in validation rules](#built-in-validation-rules)
     - [Adjusting validation at Runtime](#adjusting-validation-at-runtime)
     - [Custom validators](#custom-validators)
     - [Custom validators with paramaters](#custom-validators-with-paramaters)
     - [Cross-field validation](#cross-field-validation)
-  - [Updating values](#updating-values)
 
 ## Demo features
 
@@ -44,9 +44,11 @@ The Form Model for controlling the form can contain the following:
 
 For a more readable constructor of the FormGroup use the FormBuilder
 Import it.
+
 ![Reactive Driven Form - Import FormBuilder](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormBuilderImport.PNG)
 
 Use it.
+
 ![Reactive Driven Form - Usage FormBuilder](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormBuilderUsage.PNG)
 
 #### FormBuilder
@@ -67,6 +69,18 @@ You can acces the model properties 3 different ways.
 
 ![Reactive Driven Form - Accessing values](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
 
+## Updating values
+
+If you want to update all of the FormControls use setValue()
+
+![Reactive Driven Form - setValue()](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/SetValue.PNG)
+
+If you want to update a part of the FormControls use patchValue()
+
+![Reactive Driven Form - patchValue()](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
+
+The third option is most useful when controlls are refrenced frequently.
+
 ## Validation
 
 ### Built-in validation rules
@@ -79,6 +93,7 @@ You can specify a validator in the FormBuilder like so:
 ![Reactive Driven Form - Build-in validators](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/Built-inValidators.PNG)
 
 Import the validators:
+
 ![Reactive Driven Form - Import validators](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ImportValidators.PNG)
 
 
@@ -100,39 +115,34 @@ Sometimes the built-in validators aren't what you are looking for. So lets just 
 
 A custom validator looks like this.
 This will validate if there is a number input and if that number is between 1 and 5. Else it will return a valdiation error with the key 'rating'.
+
 ![Reactive Driven Form - Custom validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CustomValidatorRatingRange.PNG)
 
 The return value can be used to display any validation error in the form.
+
 ![Reactive Driven Form - Display Error With Custom Validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CustomValidatorError.PNG)
 
 
 And you add it the same way as a built-in validator.
+
 ![Reactive Driven Form - Add Custom Validator To FormBuilder](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/UsingCustomValidator.PNG)
 
 
 ### Custom validators with paramaters
 And sometimes a custom validator without parameters isn't what you are looking for. So lets just make a validator with parameters!
 
-Instead of returning the validation return a ValidatorFunction.
-
 Here you can see the rewritten ratingRange function from the previous header.
+Instead of returning the validation return a ValidatorFunction.
 
 ![Reactive Driven Form - Custom Validator With Parameters](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/RatingRangeParameters.PNG)
 
 Now it is possible to add parameters to the custom validation.
 
-![Reactive Driven Form - Using Parameters in Custom Validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/UsingParamatersCustomValidator.PNG)
+![Reactive Driven Form - Using Parameters in Custom Validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/UsingParametersCustomValidator.PNG)
 
 ### Cross-field validation
+There are use cases where you want to validate accross multiple fields for example, email confirmation.
 
-## Updating values
+This can be achieved with using nested FormGroups.
 
-If you want to update all of the FormControls use setValue()
-
-![Reactive Driven Form - setValue()](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/SetValue.PNG)
-
-If you want to update a part of the FormControls use patchValue()
-
-![Reactive Driven Form - patchValue()](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
-
-The third option is most useful when controlls are refrenced frequently.
+![Reactive Driven Form - Using Parameters in Custom Validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupValidation.PNG)
