@@ -3,35 +3,39 @@
 ## Table of contents
 - [Demo reactive driven](#demo-reactive-driven)
   - [Table of contents](#table-of-contents)
-  - [Demo features](#demo-features)
-  - [Using Reactive Forms](#using-reactive-forms)
-  - [Concept](#concept)
-  - [Form Model](#form-model)
+  - [1. Demo features](#1-demo-features)
+  - [2. Using Reactive Forms](#2-using-reactive-forms)
+  - [3. Concept](#3-concept)
+    - [Form Model](#form-model)
     - [Form Group](#form-group)
     - [Form Controls](#form-controls)
       - [FormBuilder](#formbuilder)
     - [Binding to Form Model](#binding-to-form-model)
     - [Accessing Model Properties](#accessing-model-properties)
-  - [Updating values](#updating-values)
-  - [Validation](#validation)
+  - [4. Updating values](#4-updating-values)
+  - [5. Validation](#5-validation)
     - [Built-in validation rules](#built-in-validation-rules)
     - [Adjusting validation at Runtime](#adjusting-validation-at-runtime)
     - [Custom validators](#custom-validators)
     - [Custom validators with paramaters](#custom-validators-with-paramaters)
     - [Cross-field validation](#cross-field-validation)
+  - [6. Reacting to changes](#6-reacting-to-changes)
+    - [Watch](#watch)
+    - [Reacht](#reacht)
+    - [Reactive transformations](#reactive-transformations)
 
-## Demo features
+## 1. Demo features
 
-## Using Reactive Forms
+## 2. Using Reactive Forms
 
 Before you can use the Reactive Forms you need to import ReactiveFormsModule into the app.module.ts
 
 ![Reactive Driven Form - validation](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ImportReactiveFormsModule.PNG)
 
-## Concept
+## 3. Concept
 ![Template Driven Form - Variable input](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ReactiveFormsConcept.png)
 
-## Form Model
+### Form Model
 The Form Model for controlling the form can contain the following:
 
 ![Reactive Driven Form - FormModel](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormModel.PNG)
@@ -69,7 +73,7 @@ You can acces the model properties 3 different ways.
 
 ![Reactive Driven Form - Accessing values](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
 
-## Updating values
+## 4. Updating values
 
 If you want to update all of the FormControls use setValue()
 
@@ -81,7 +85,7 @@ If you want to update a part of the FormControls use patchValue()
 
 The third option is most useful when controlls are refrenced frequently.
 
-## Validation
+## 5. Validation
 
 ### Built-in validation rules
 These are the avaible validator options from the Validators class in Angular
@@ -98,6 +102,8 @@ Import the validators:
 
 
 ### Adjusting validation at Runtime
+NOTE: Refer to Chapter 6 for reacting to changes in runtime
+
 Changing the validators of a FormControl can be done by using the setValidators() method.
 
 ![Reactive Driven Form - setValidators()](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/SetValidators.PNG)
@@ -145,4 +151,39 @@ There are use cases where you want to validate accross multiple fields for examp
 
 This can be achieved with using nested FormGroups.
 
-![Reactive Driven Form - Using Parameters in Custom Validator](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupValidation.PNG)
+![Reactive Driven Form - Nested Group](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupValidation.PNG)
+
+Here is an example of using a custom validator with a nested FormGroup. This function checks if the email value is the same as the confirm email value.
+
+![Reactive Driven Form - Nested Group Custom Validation](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupCustomValidation.PNG)
+
+This custom validator can be added to the nested FormGroup like so:
+
+![Reactive Driven Form - Nested Form Group Add Custom Validation](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupAddCustomValidation.PNG)
+
+Add customerForm.get('emailGroup').errors to the form to display the match error.
+
+![Reactive Driven Form - Nested FormGroup Check Errors](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedFormGroupCheckErrors.PNG)
+out
+
+This displays the following error message.
+
+![Reactive Driven Form - Email Confirmation Error message](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/EmailConfirmationErrorMessage.PNG)
+out
+
+## 6. Reacting to changes
+
+In this module I will go over the following topics
+-Watch for user changes.
+-React to those changes.
+-Reactive transformations to improve how to watch the changes.
+
+### Watch
+
+You can subscribe to the valueChanges function of a FormControl, FormGroup or a Form itself. Below are some examples
+
+![Reactive Driven Form - Email Confirmation Error message](https://gitlab.pp-dcs.nl/BasvE/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/Watching.PNG)
+
+### Reacht
+
+### Reactive transformations

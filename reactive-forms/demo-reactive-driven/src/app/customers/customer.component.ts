@@ -14,6 +14,24 @@ function ratingRange(min: number, max: number): ValidatorFn{
   }
 }
 
+function emailMatcher(c: AbstractControl): { [key: string]: boolean } | null {
+  const emailControl = c.get('email');
+  const confirmControl = c.get('confirmEmail');
+
+  // If the email or confirm email input is not touched, return valid.
+  if(emailControl?.pristine || confirmControl?.pristine){
+    return null;
+  }
+
+  // If the email value and confirm email value are the same, return valid.
+  if(emailControl?.value == confirmControl?.value){
+    return null;
+  }
+  
+  // Return invalid for the FormGroup
+  return { 'match': true};
+}
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -29,12 +47,19 @@ export class CustomerComponent implements OnInit {
     this.customerForm = this.formBuilder.group({
       firstName: ['', [Validators.required, Validators.minLength(3)]],
       lastName: ['', [Validators.required, Validators.maxLength(50)]],
-      email: ['', [Validators.required, Validators.email]],
+      emailGroup: this.formBuilder.group({
+        email: ['', [Validators.required, Validators.email]],
+        confirmEmail: ['', Validators.required],
+      }, {validator: emailMatcher}),
       phone: '',
       notification: 'email',
       rating: [null, ratingRange(1,5)],
       sendCatalog: true
     })
+
+    this.customerForm.get('notification')?.valueChanges.subscribe(
+      value => console.log(value)
+    );
   }
 
   save(): void {
