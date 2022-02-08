@@ -30,30 +30,30 @@
 
 Before you can use the Reactive Forms you need to import ReactiveFormsModule into the app.module.ts
 
-![Reactive Driven Form - validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ImportReactiveFormsModule.PNG)
+![Reactive Driven Form - validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/ImportReactiveFormsModule.PNG)
 
 ## 3. Concept
-![Template Driven Form - Variable input](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ReactiveFormsConcept.png)
+![Template Driven Form - Variable input](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/ReactiveFormsConcept.png)
 
 ### Form Model
 The Form Model for controlling the form can contain the following:
 
-![Reactive Driven Form - FormModel](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormModel.PNG)
+![Reactive Driven Form - FormModel](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/FormModel.PNG)
 
 ### Form Group
-![Reactive Driven Form - Create Form Group](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CreatingFormGroup.PNG)
+![Reactive Driven Form - Create Form Group](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/CreatingFormGroup.PNG)
 
 ### Form Controls
-![Reactive Driven Form - Create Form Controls](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CreatingFormControls.PNG)
+![Reactive Driven Form - Create Form Controls](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/CreatingFormControls.PNG)
 
 For a more readable constructor of the FormGroup use the FormBuilder
 Import it.
 
-![Reactive Driven Form - Import FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormBuilderImport.PNG)
+![Reactive Driven Form - Import FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/FormBuilderImport.PNG)
 
 Use it.
 
-![Reactive Driven Form - Usage FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/FormBuilderUsage.PNG)
+![Reactive Driven Form - Usage FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/FormBuilderUsage.PNG)
 
 #### FormBuilder
 
@@ -61,27 +61,27 @@ Use it.
 ### Binding to Form Model
 By using [formgroup] you can bind the created FormGroup from the customer.component.ts
 
-![Reactive Driven Form - Binding to Form](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/BindingToForm.PNG)
+![Reactive Driven Form - Binding to Form](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/BindingToForm.PNG)
 
 And also bind the formControls to a specific created FormControl
 
-![Reactive Driven Form - Binding controls](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/BindingFormControl.PNG)
+![Reactive Driven Form - Binding controls](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/BindingFormControl.PNG)
 
 
 ### Accessing Model Properties
 You can acces the model properties 3 different ways.
 
-![Reactive Driven Form - Accessing values](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
+![Reactive Driven Form - Accessing values](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
 
 ## 4. Updating values
 
 If you want to update all of the FormControls use setValue()
 
-![Reactive Driven Form - setValue()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/SetValue.PNG)
+![Reactive Driven Form - setValue()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/SetValue.PNG)
 
 If you want to update a part of the FormControls use patchValue()
 
-![Reactive Driven Form - patchValue()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
+![Reactive Driven Form - patchValue()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/AccessingModelProperties.PNG)
 
 The third option is most useful when controlls are refrenced frequently.
 
@@ -90,15 +90,15 @@ The third option is most useful when controlls are refrenced frequently.
 ### Built-in validation rules
 These are the avaible validator options from the Validators class in Angular
 
-![Reactive Driven Form - Validators class](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/Built-inValidatorsClass.PNG)
+![Reactive Driven Form - Validators class](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/Built-inValidatorsClass.PNG)
 
 You can specify a validator in the FormBuilder like so:
 
-![Reactive Driven Form - Build-in validators](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/Built-inValidators.PNG)
+![Reactive Driven Form - Build-in validators](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/Built-inValidators.PNG)
 
 Import the validators:
 
-![Reactive Driven Form - Import validators](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/ImportValidators.PNG)
+![Reactive Driven Form - Import validators](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/ImportValidators.PNG)
 
 
 ### Adjusting validation at Runtime
@@ -106,15 +106,15 @@ NOTE: Refer to Chapter 6 for reacting to changes in runtime
 
 Changing the validators of a FormControl can be done by using the setValidators() method.
 
-![Reactive Driven Form - setValidators()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/SetValidators.PNG)
+![Reactive Driven Form - setValidators()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/SetValidators.PNG)
 
 After setting new validators, you need to revalidate those validators  with updateValueAndValidity().
 
-![Reactive Driven Form - updateValueAndValidity()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/updateValueAndValidity.PNG)
+![Reactive Driven Form - updateValueAndValidity()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/updateValueAndValidity.PNG)
 
 Here is an example of setting the phone field required when selecting notify via phone
 
-![Reactive Driven Form - setNotifation()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/AdjustingValidationComponent.PNG)
+![Reactive Driven Form - setNotifation()](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/AdjustingValidationComponent.PNG)
 
 ### Custom validators
 Sometimes the built-in validators aren't what you are looking for. So lets just make a validator yourself!
@@ -122,16 +122,16 @@ Sometimes the built-in validators aren't what you are looking for. So lets just 
 A custom validator looks like this.
 This will validate if there is a number input and if that number is between 1 and 5. Else it will return a valdiation error with the key 'rating'.
 
-![Reactive Driven Form - Custom validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CustomValidatorRatingRange.PNG)
+![Reactive Driven Form - Custom validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/CustomValidatorRatingRange.PNG)
 
 The return value can be used to display any validation error in the form.
 
-![Reactive Driven Form - Display Error With Custom Validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/CustomValidatorError.PNG)
+![Reactive Driven Form - Display Error With Custom Validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/CustomValidatorError.PNG)
 
 
 And you add it the same way as a built-in validator.
 
-![Reactive Driven Form - Add Custom Validator To FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/UsingCustomValidator.PNG)
+![Reactive Driven Form - Add Custom Validator To FormBuilder](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/UsingCustomValidator.PNG)
 
 
 ### Custom validators with paramaters
@@ -140,35 +140,35 @@ And sometimes a custom validator without parameters isn't what you are looking f
 Here you can see the rewritten ratingRange function from the previous header.
 Instead of returning the validation return a ValidatorFunction.
 
-![Reactive Driven Form - Custom Validator With Parameters](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/RatingRangeParameters.PNG)
+![Reactive Driven Form - Custom Validator With Parameters](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/RatingRangeParameters.PNG)
 
 Now it is possible to add parameters to the custom validation.
 
-![Reactive Driven Form - Using Parameters in Custom Validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/UsingParametersCustomValidator.PNG)
+![Reactive Driven Form - Using Parameters in Custom Validator](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/UsingParametersCustomValidator.PNG)
 
 ### Cross-field validation
 There are use cases where you want to validate accross multiple fields for example, email confirmation.
 
 This can be achieved with using nested FormGroups.
 
-![Reactive Driven Form - Nested Group](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupValidation.PNG)
+![Reactive Driven Form - Nested Group](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/NestedGroupValidation.PNG)
 
 Here is an example of using a custom validator with a nested FormGroup. This function checks if the email value is the same as the confirm email value.
 
-![Reactive Driven Form - Nested Group Custom Validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupCustomValidation.PNG)
+![Reactive Driven Form - Nested Group Custom Validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/NestedGroupCustomValidation.PNG)
 
 This custom validator can be added to the nested FormGroup like so:
 
-![Reactive Driven Form - Nested Form Group Add Custom Validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedGroupAddCustomValidation.PNG)
+![Reactive Driven Form - Nested Form Group Add Custom Validation](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/NestedGroupAddCustomValidation.PNG)
 
 Add customerForm.get('emailGroup').errors to the form to display the match error.
 
-![Reactive Driven Form - Nested FormGroup Check Errors](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/NestedFormGroupCheckErrors.PNG)
+![Reactive Driven Form - Nested FormGroup Check Errors](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/NestedFormGroupCheckErrors.PNG)
 out
 
 This displays the following error message.
 
-![Reactive Driven Form - Email Confirmation Error message](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/EmailConfirmationErrorMessage.PNG)
+![Reactive Driven Form - Email Confirmation Error message](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/EmailConfirmationErrorMessage.PNG)
 out
 
 ## 6. Reacting to changes
@@ -182,7 +182,7 @@ In this module I will go over the following topics
 
 You can subscribe to the valueChanges function of a FormControl, FormGroup or a Form itself. Below are some examples
 
-![Reactive Driven Form - Email Confirmation Error message](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/-/raw/main/reactive-forms/demo-reactive-driven/images/Watching.PNG)
+![Reactive Driven Form - Email Confirmation Error message](https://raw.githubusercontent.com/MaSnikka/angular-knowledge-is-power/main/reactive-forms/demo-reactive-driven/images/Watching.PNG)
 
 ### Reacht
 
